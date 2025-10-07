@@ -59,7 +59,11 @@ function App() {
       style={{
         minHeight: "100vh",
         width: "100%",
-        background: `linear-gradient(to bottom, #1e3c72, #2a5298)`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${process.env.PUBLIC_URL}/images/background.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -75,7 +79,7 @@ function App() {
         width: "100%"
       }}>
         <img
-          src="/images/background.jpg"
+          src={process.env.PUBLIC_URL + "/images/background.jpg"}
           alt="Mosque"
           style={{ 
             width: "100%", 
